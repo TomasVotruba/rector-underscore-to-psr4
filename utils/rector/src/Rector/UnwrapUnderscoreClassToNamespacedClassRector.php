@@ -51,6 +51,13 @@ final class UnwrapUnderscoreClassToNamespacedClassRector extends AbstractRector
         $node->name = new Node\Name($shortClasName);
         $namespace = new Node\Stmt\Namespace_(new Node\Name($namespaceName), [$node]);
 
+        // @todo
+        // 1. add collecting of old class => new class
+        // then feed this list to RenameClassRector and run Rector again
+
+        // 2. add collecting current file location => new file location
+        // then run "mv old-file.php new-file.php" with this list
+
         return $namespace;
     }
 }
