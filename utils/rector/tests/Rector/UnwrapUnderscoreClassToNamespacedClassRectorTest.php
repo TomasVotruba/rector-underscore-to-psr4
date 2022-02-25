@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Utils\Rector\Tests\Rector;
 
 use Rector\Testing\PHPUnit\AbstractRectorTestCase;
+use Symplify\SmartFileSystem\SmartFileInfo;
 
 final class UnwrapUnderscoreClassToNamespacedClassRectorTest extends AbstractRectorTestCase
 {
@@ -19,7 +20,7 @@ final class UnwrapUnderscoreClassToNamespacedClassRectorTest extends AbstractRec
     /**
      * @return Iterator<SmartFileInfo>
      */
-    public function provideData(): Iterator
+    public function provideData(): \Iterator
     {
         return $this->yieldFilesFromDirectory(__DIR__ . '/Fixture');
     }
