@@ -15,9 +15,9 @@ jobs:
             -
                 uses: shivammathur/setup-php@v2
                 with:
-                    php-version: 7.1
+                    php-version: 7.4
                     coverage: none
 
             -   run: composer install --no-progress --ansi
 
-            -   run: vendor/bin/rector process src --ansi --dry-run
+            -   run: vendor/bin/rector process src --ansi
