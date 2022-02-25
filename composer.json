@@ -1,0 +1,14 @@
+{
+    "require": {
+        "php": "^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Do\\Some\\": "src"
+        },
+        "classmap": ["src"]
+    },
+    "require-dev": {
+        "rector/rector": "^0.12.16"
+    }
+}
